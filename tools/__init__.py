@@ -1,2 +1,2 @@
 from .glucose import Glucose
-from .lingeling import Lingeling
+from .lingeling import Lingeling, Plingeling

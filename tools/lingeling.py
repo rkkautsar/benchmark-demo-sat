@@ -13,13 +13,13 @@ DIR = os.path.dirname(__file__)
 class Lingeling(ExecutableTool):
     name = "Lingeling SAT solver"
     base_path = Path(DIR) / "_downloaded"
-    path = base_path / "lingeling-master" / "plingeling"
+    path = base_path / "lingeling-master" / "lingeling"
     url = "https://github.com/arminbiere/lingeling/archive/master.zip"
-    prefix = "-"
+    prefix = "--"
 
     def get_arguments(self):
         return itertools.chain.from_iterable(
-            (f"-{key}", value) for key, value in self.parameters.items()
+            (f"{self.prefix}{key}", value) for key, value in self.parameters.items()
         )
 
     @classmethod
@@ -40,3 +40,9 @@ class Lingeling(ExecutableTool):
     @classmethod
     def is_ready(cls):
         return Path(cls.path).is_file()
+
+
+class Plingeling(Lingeling):
+    name = "Parallel Lingeling SAT solver"
+    path = base_path / "lingeling-master" / "plingeling"
+    prefix = "-"

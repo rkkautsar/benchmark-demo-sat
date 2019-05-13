@@ -39,10 +39,9 @@ tools:
     parameters:
       default:
         __pcs: file://./tools/glucose.pcs
-        nthreads: 1..3
-  lingeling:
-    module: tools.Lingeling
+        nthreads: 1..2
+  plingeling:
+    module: tools.Plingeling
     parameters:
       default:
-        __pcs: file://./tools/lingeling.pcs
-        t: 1..3
+        t: 1..2

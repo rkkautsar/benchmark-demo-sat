@@ -2,3 +2,4 @@ tasks/
 _downloaded/
 __pycache__
 *.pyc
+output/
