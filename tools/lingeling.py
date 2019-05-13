@@ -44,5 +44,6 @@ class Lingeling(ExecutableTool):
 
 class Plingeling(Lingeling):
     name = "Parallel Lingeling SAT solver"
-    path = self.base_path / "lingeling-master" / "plingeling"
+    base_path = Path(DIR) / "_downloaded"
+    path = base_path / "lingeling-master" / "plingeling"
     prefix = "-"
