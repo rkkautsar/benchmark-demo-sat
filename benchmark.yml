@@ -32,15 +32,6 @@ tasks:
     patterns: |
       **/*.cnf
       !**/*.tar.gz
-  5sat500:
-    type: url
-    urls:
-      - http://aclib.net/cssc2014/instances/5sat500.tar.gz
-    path: ./tasks/5sat500
-    extract_archives: true
-    patterns: |
-      **/*.cnf
-      !**/*.tar.gz
 
 tools:
   glucose:
