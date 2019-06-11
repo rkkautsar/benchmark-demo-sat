@@ -10,7 +10,7 @@ steps:
   run:
     - module: reprobench.core.sysinfo.CollectSystemInfo
     - module: reprobench.executors.PsmonExecutor
-    - module: sat.validate.SATValidator
+#    - module: sat.validate.SATValidator # temporarily removed as it still gives invalid validation
   analysis:
     - module: reprobench.statistics.plots.CactusPlot
       config:
